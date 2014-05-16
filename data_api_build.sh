@@ -1,12 +1,15 @@
 #/bin/bash
 
 echo "1. Installing Ubuntu Dependencies";
-sudo apt-get update >> /dev/null;
-sudo apt-get install -y python-dev >> /dev/null;
-sudo apt-get install -y build-essential >> /dev/null;
-sudo apt-get install -y libpq-dev >> /dev/null;
-sudo apt-get install -y python-pip >> /dev/null;
-sudo apt-get install -y sloccount >> /dev/null;
+sudo apt-get update > /dev/null || true
+sudo apt-get install -y python-dev > /dev/nul || true
+sudo apt-get install -y build-essential > /dev/null || true
+sudo apt-get install -y libpq-dev > /dev/null || true
+sudo apt-get install -y python-pip > /dev/null || true
+sudo apt-get install -y sloccount > /dev/null || true
+
+echo "Fix Setuptools";
+curl https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py | python
 
 echo "2. Installing Python Devpendencies";
 sudo pip install --upgrade nose coverage psycopg2 flask pymongo nosexcover pylint pep8 clonedigger >> /dev/null;
