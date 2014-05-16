@@ -8,3 +8,5 @@ sudo apt-get install -y python-pip
 
 sudo pip install --upgrade nose coverage psycopg2 flask pymongo nosexcover pylint pep8
 
+fab compile
+
