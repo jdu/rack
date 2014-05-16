@@ -12,6 +12,8 @@ echo "Fix Setuptools";
 curl https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py | python
 
 echo "2. Installing Python Devpendencies";
+sudo pip install --upgrade setuptools
+sudo pip install --upgrade distribute
 sudo pip install --upgrade nose coverage psycopg2 flask pymongo nosexcover pylint pep8 clonedigger >> /dev/null;
 
 echo "3. Running CI Tasks";
