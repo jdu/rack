@@ -1,14 +1,17 @@
 #/bin/bash
 
-sudo apt-get update
-sudo apt-get install -y python-dev
-sudo apt-get install -y build-essential
-sudo apt-get install -y libpq-dev
-sudo apt-get install -y python-pip
-sudo apt-get install -y sloccount
+echo "1. Installing Ubuntu Dependencies";
+sudo apt-get update >> /dev/null;
+sudo apt-get install -y python-dev >> /dev/null;
+sudo apt-get install -y build-essential >> /dev/null;
+sudo apt-get install -y libpq-dev >> /dev/null;
+sudo apt-get install -y python-pip >> /dev/null;
+sudo apt-get install -y sloccount >> /dev/null;
 
-sudo pip install --upgrade nose coverage psycopg2 flask pymongo nosexcover pylint pep8 clonedigger
+echo "2. Installing Python Devpendencies";
+sudo pip install --upgrade nose coverage psycopg2 flask pymongo nosexcover pylint pep8 clonedigger >> /dev/null;
 
+echo "3. Running CI Tasks";
 rm -R ../build
 mkdir ../build
 cd ../
