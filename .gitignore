@@ -1,0 +1,11 @@
+.DS_Store
+
+client-side/package.json
+client-side/node_modules
+client-side/build
+
+data-api/build
+
+php-api/build
+
+.idea

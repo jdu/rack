@@ -1,16 +1,11 @@
 #/bin/bash
 
-rm -R "$WORKSPACE/build" | true
-
-mkdir "$WORKSPACE/build"
-mkdir "$WORKSPACE/build/api"
-mkdir "$WORKSPACE/build/coverage"
-mkdir "$WORKSPACE/build/logs"
-mkdir "$WORKSPACE/build/pdepend"
-mkdir "$WORKSPACE/build/phpdox"
-
-phploc --count-tests --log-csv "$WORKSPACE/build/logs/phploc.csv" --log-xml "$WORKSPACE/build/logs/phploc.xml" --exclude "$WORKSPACE/api/application/third_party" "$WORKSPACE/api/application" "$WORKSPACE/api/tests"
-
-pdepend --jdepend-xml="$WORKSPACE/build/logs/jdepend.xml" --jdepend-chart="$WORKSPACE/build/pdepend/dependencies.svg" --overview-pyramid="$WORKSPACE/build/pdepend/overview-pyramid.svg" --ignore="$WORKSPACE/api/application/third_party" "$WORKSPACE/api/application"
-
-phpmd "$WORKSPACE/api/application" text "$WORKSPACE/build/phpmd.xml" --exclude "$WORKSPACE/api/application/third_party"
+find /var/www/siv-v3/api/application -name "*.php" -exec php -l {} \;
+phploc --count-tests --exclude /var/www/siv-v3/api/application/third_party /var/www/siv-v3/api/application /var/www/siv-v3/api/tests;
+pdepend --ignore=/var/www/siv-v3/api/application/third_party /var/www/siv-v3/api/application;
+# phpmd /var/www/siv-v3/api/application text cleancode,codesize,controversial,design,naming,unusedcode --exclude /var/www/siv-v3/api/application/third_party;
+# phpmd /var/www/api/application text cleancode,codesize,controversial,design,naming,unusedcode --exclude /var/www/siv-v3/api/application/third_party;
+# phpcs /var/www/siv-v3/api/application;
+# phpcs --report=checkstyle /var/www/siv-v3/api/application;
+# phpcpd --log-pmd /var/www/siv-v3/api/application;
+phpunit;

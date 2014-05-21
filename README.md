@@ -1,4 +1,5 @@
-twine-jenkins-scripts
+The Rack
 =====================
 
-A repository of scripts used for jenkins Continuos Integration for the Twine project
+A repository of scripts (Soon to have a GUI) for running tests againsts the various
+parts of the Twine applicaton in a local environment.

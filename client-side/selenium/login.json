@@ -1,0 +1,61 @@
+{
+  "type": "script",
+  "seleniumVersion": "2",
+  "formatVersion": 2,
+  "steps": [
+    {
+      "type": "get",
+      "url": "http://192.168.50.4/siv-v3/login.php"
+    },
+    {
+      "type": "waitForElementSelected",
+      "locator": {
+        "type": "id",
+        "value": "sign-in-user"
+      }
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "sign-in-user"
+      },
+      "text": "mark"
+    },
+    {
+      "type": "setElementText",
+      "locator": {
+        "type": "id",
+        "value": "sign-in-password"
+      },
+      "text": "dev"
+    },
+    {
+      "type": "clickElement",
+      "locator": {
+        "type": "id",
+        "value": "loginBtn"
+      }
+    },
+    {
+      "type": "waitForElementPresent",
+      "locator": {
+        "type": "id",
+        "value": "tab-button-ToolArea"
+      }
+    },
+    {
+      "type": "assertElementPresent",
+      "locator": {
+        "type": "id",
+        "value": "tab-button-ToolArea"
+      }
+    }
+  ],
+  "data": {
+    "configs": {},
+    "source": "none"
+  },
+  "inputs": [],
+  "timeoutSeconds": 60
+}
