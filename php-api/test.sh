@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/sh
 
 find /var/www/siv-v3/api/application -name "*.php" -exec php -l {} \;
 phploc --count-tests --exclude /var/www/siv-v3/api/application/third_party /var/www/siv-v3/api/application /var/www/siv-v3/api/tests;

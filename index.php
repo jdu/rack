@@ -50,7 +50,18 @@
                  function(){
                     console.log(arguments);
                 })
-            })
+            });
+
+            $('#selenium-runner').on("click", function(){
+                $.get("client-side/SpecRunner.php",
+                     {
+                        action: "test"
+                     },
+                     function(){
+                        console.log(arguments);
+                     }
+                 );
+            });
         })
     </script>
 </head>
@@ -92,19 +103,28 @@
                 <tbody>
                 <tr>
                     <td>Mocha (Unit Tests)</td>
-                    <td><a href="client-side/test.html">Click Here to View</a></td>
+                    <td>
+                        <a href="client-side/test.php" class="button small">Run/View</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>Kitchen Sink (HTML/CSS)</td>
-                    <td><a href="client-side/sink.html">Click Here to View</a></td>
+                    <td>
+                        <a href="client-side/sink.html" class="button small">View</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>Kitchen Sink (UI Components)</td>
-                    <td><a href="client-side/sink_components.html">Click Here to View</a></td>
+                    <td>
+                        <a href="client-side/sink_components.html" class="button small">View</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>Selenium (Functional/Automated User)</td>
-                    <td><a href="client-side/test.html">Click Here to View</a></td>
+                    <td>
+                        <button class="button small" id="specrunner-selenium">Run</button>
+                        <a href="client-side/build/selenium_results.html" class="button small">View</a>
+                    </td>
                 </tr>
                 </tbody>
             </table>
