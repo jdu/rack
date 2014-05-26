@@ -1,83 +1,873 @@
 <?php ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>twine</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+<head>
+    <title>Kitchen Sink (HTML/CSS)</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-        <link type="text/css" rel="stylesheet" href="assets/css/reset.css"/>
-        <link type="text/css" rel="stylesheet/less" href="assets/css/less/bootstrap/bootstrap.less"/>
-        <link type="text/css" rel="stylesheet/less" href="assets/css/less/twine.less"/>
-        <link type="text/css" rel="stylesheet" href="assets/css/siv.jquery-ui.css"/>
-        <link type="text/css" rel="stylesheet" href="assets/css/leaflet.css"/>
-        <link type="text/css" rel="stylesheet" href="assets/css/leaflet.draw.css"/>
-        <link type="text/css" rel="stylesheet" href="assets/css/MarkerCluster.css"/>
-        <link type="text/css" rel="stylesheet" href="assets/css/MarkerCluster.Default.css"/>
+    <link type="text/css" rel="stylesheet" href="/siv-v3/assets/css/reset.css"/>
+    <link type="text/css" rel="stylesheet/less" href="/siv-v3/assets/css/less/bootstrap/bootstrap.less"/>
+    <link type="text/css" rel="stylesheet/less" href="/siv-v3/assets/css/less/twine.less"/>
+    <link type="text/css" rel="stylesheet" href="/siv-v3/assets/css/siv.jquery-ui.css"/>
+    <link type="text/css" rel="stylesheet" href="/siv-v3/assets/css/leaflet.css"/>
+    <link type="text/css" rel="stylesheet" href="/siv-v3/assets/css/leaflet.draw.css"/>
+    <link type="text/css" rel="stylesheet" href="/siv-v3/assets/css/MarkerCluster.css"/>
+    <link type="text/css" rel="stylesheet" href="/siv-v3/assets/css/MarkerCluster.Default.css"/>
+
+    <style>
+        body, html {
+            overflow: auto !important;
+        }
+    </style>
+
+</head>
+<body style="overflow: auto;">
+
+<div class="container">
+<div class="row">
+<div class="span-12">
 
 
-        <link rel="shortcut icon" href="assets/icons/app/siv-logo-ico.ico" type="image/x-icon"/>
+<h1>Kitchen Sink</h1>
 
-        <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-        <link rel="apple-touch-icon-precomposed" href="assets/icons/app/apple-touch-icon-precomposed.png">
-        <!-- For first- and second-generation iPad: -->
-        <link rel="apple-touch-icon-precomposed" sizes="72x72"
-              href="assets/icons/app/apple-touch-icon-72x72-precomposed.png">
-        <!-- For iPhone with high-resolution Retina display: -->
-        <link rel="apple-touch-icon-precomposed" sizes="114x114"
-              href="assets/icons/app/apple-touch-icon-114x114-precomposed.png">
-        <!-- For third-generation iPad with high-resolution Retina display: -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144"
-              href="assets/icons/app/apple-touch-icon-144x144-precomposed.png">
+<hr/>
 
-    </head>
-    <body>
+<h2>Typography</h2>
 
-        <div id="siv-loading-mask">
-            <div id="siv-loading-text">Loading...</div>
+<table class="table table-bordered">
+<tr>
+    <th>Headings</th>
+    <td>
+        <h1>Heading 1</h1>
+
+        <h2>Heading 2</h2>
+
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+    </td>
+</tr>
+<tr>
+    <th>Paragraph</th>
+    <td>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nisi nunc, iaculis eu nunc nec,
+            fermentum vehicula enim. Aliquam consequat aliquet viverra. Nulla facilisi. Nam sed varius
+            risus. Aliquam egestas arcu tempus tortor ullamcorper iaculis. Fusce non justo dictum,
+            tincidunt
+            lorem et, facilisis ligula. Curabitur faucibus laoreet erat, vitae placerat diam. Nunc id
+            nisi
+            vitae augue accumsan laoreet. Proin ut nisi nec erat lobortis commodo. Suspendisse ut mauris
+            sed
+            dui molestie aliquet vitae ac quam. Nunc non libero id libero convallis volutpat sed in
+            nisi.</p>
+
+        <p>Vestibulum vestibulum sed erat vel pellentesque. Aliquam vitae metus vel nunc suscipit
+            imperdiet
+            id in nunc. Pellentesque tempus bibendum ipsum id tristique. Nunc molestie dignissim quam
+            vitae
+            venenatis. Aenean viverra sit amet nisi quis viverra. Proin tempus pretium libero, et semper
+            lacus dictum in. Mauris rhoncus tristique arcu, sit amet sagittis lectus. Pellentesque
+            dapibus
+            accumsan lacus eu sollicitudin. Integer a congue purus, quis convallis eros. Nam molestie
+            sem
+            quis tincidunt sodales. Nulla libero lorem, pellentesque sagittis varius ac, pulvinar sed
+            mi.</p>
+
+        <p>Quisque lobortis orci orci, sed facilisis enim rhoncus et. Ut feugiat tristique sapien id
+            ullamcorper. Pellentesque facilisis, leo sed ullamcorper tristique, libero dui tempor orci,
+            semper adipiscing quam sem in lectus. Vestibulum ante ipsum primis in faucibus orci luctus
+            et
+            ultrices posuere cubilia Curae; Fusce dictum risus quis varius rhoncus. In in ante tortor.
+            Nullam sed pretium lorem, a consectetur nulla. Nam luctus arcu quis metus sollicitudin,
+            vitae
+            dignissim diam rutrum. </p>
+
+    </td>
+</tr>
+<tr>
+    <th>Links</th>
+    <td>
+        <a href="#">Test Link</a>
+    </td>
+</tr>
+<tr>
+    <th>Lists</th>
+    <td>
+        <label>Normal (ul)</label>
+        <ul>
+            <li>Test Item 1</li>
+            <li>Test Item 2</li>
+        </ul>
+
+        <label>dl</label>
+        <dl>
+            <dt>Item Title</dt>
+            <dd>Item description</dd>
+        </dl>
+    </td>
+
+</tr>
+<tr>
+    <th>Buttons</th>
+    <td>
+        <label>Basic Button</label><br/>
+        <button class="btn btn-small">Button</button>
+    </td>
+</tr>
+<tr>
+    <th>Blockquote</th>
+    <td>
+        <blockquote>This is a blockquote</blockquote>
+    </td>
+</tr>
+<tr>
+    <th>Toolbar</th>
+    <td>
+        <div class="toolbar">
+            <button class="btn btn-sm btn-default pull-right">Button</button>
         </div>
-        <script type="text/javascript">
-            // Sets the height of the loading text
-            var winHeight = window.innerHeight;
-            var ld = document.getElementById("siv-loading-mask")
-            ld.style.height = winHeight + "px";
-            ld.style.overflow = "hidden";
-        </script>
+    </td>
+</tr>
+<tr>
+    <th>Tour Window</th>
+    <td>
+        <div class="tourWindow" id="tourBody" style="position: relative;">
+            <div style="display: none;" id="tourPointer"></div>
+            <b id="tourTitle">1. Step Name</b><br>
 
-        <div class="siv-header" id="siv-head-wrap">
-            <span class="siv-logo">
-                <a class="siv-logo-link" href="/"></a>
-            </span>
-            <a id="siv-brand"></a>
-            <div id="user_controls"></div>
+            <div id="sivTourMsg"><p>Tour step description.</p></div>
+            <div id="tourControls" class="btn-group">
+                <button class="btn btn-default btn-xs" id="showPrev">Previous
+                </button>
+                <button class="btn btn-default btn-xs" id="showNext">Next</button>
+                <button class="btn btn-default btn-xs" style="float: right;" id="closeTour">Quit
+                </button>
+            </div>
         </div>
+    </td>
+</tr>
+<tr>
+    <th>Dropdown Button</th>
+    <td>
+        <div class="btn-group pull-right">
+            <a class="btn btn-default" id="user-btn" href="#"><i class="icon user"></i> User</a>
+            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#"><span
+                    class="caret"></span></a>
 
-        <div id="webapp" class="siv-viewport"></div>
+            <div class="dropdown-menu">
+                <div id="user-menu-wrapper" style="width: 350px;">
+                    <ul class="menu-half">
+                        <li><a href="#" id="siv-user-profile"><i class="icon user"></i>&nbsp;My Profile</a>
+                        </li>
+                        <li><a href="#" id="siv-user-password"><i class="icon lock"></i>&nbsp;Change
+                            Password</a></li>
+                        <li><a href="#" id="siv-user-location"><i class="icon google_maps"></i>&nbsp;Set
+                            Default Location</a></li>
+                        <li><a href="#" id="siv-user-mode"><i class="icon magic"></i>&nbsp;Change
+                            Mode</a></li>
+                        <li><a href="#" id="twine-user-permissions"><i class="icon flag"></i>&nbsp;Notifications</a>
+                        </li>
+                    </ul>
+                    <ul class="menu-half pull-right">
+                        <li><a href="#" id="twine-tutorials-btn"><i class="icon circle_info"></i>&nbsp;Tutorials</a>
+                        </li>
+                        <li><a href="#" id="twine-shortcuts"><i
+                                class="icon star"></i>&nbsp;Shortcuts</a></li>
+                        <li><a href="#" id="twine-permissions-btn"><i class="icon vcard"></i>&nbsp;Permissions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-spacer"></div>
+                <a id="siv-user-logout" href="#" class="btn btn-default pull-right"
+                   style="margin-top: 5px;"><i class="icon exit"></i>&nbsp;Sign Out</a>
+            </div>
+        </div>
+    </td>
+</tr>
+<tr>
+<th>Grid</th>
+<td>
+<div style="max-height: 408px; height: 408px;" class="grid-wrapper" id="PermissionsEditor">
+<div class="toolbar">
 
-        <?php include "app/templates/footer.php"; ?>
+		<span class="grid-title">
 
-        <!--[if gte IE 9 ]>
-        <script src="app/vendor/es5-shim.min.js"></script>
-        <script src="app/vendor/es5-sham.min.js"></script>
-        <![endif]-->
+				<i class="icon group"></i>
 
-        <!--[if gte IE 9 ]>
-        <script src="app/vendor/aight.min.js"></script>
-        <script src="app/vendor/aight.d3.min.js"></script>
-        <![endif]-->
-
-        <script type="text/javascript">
-            less = {
-                env: "development" // or "production"
-            };
-        </script>
-        <!-- build:js build/main.js -->
-        <!-- endbuild -->
-        <script type="text/javascript" src="app/vendor/raphael-min.js"></script>
-        <script type="text/javascript" src="app/vendor/less-1.5.0.min.js"></script>
-
-        <script data-main="app/app.js" src="app/require.js"></script>
+			User Manager
+		</span>
 
 
-    </body>
+    <!--
+    <div class="grid-menu">
+        <a href="#">Edit <span class="caret"></span></a>
+        <ul class="grid-sub-menu">
+            <li><a href="#">Select All</a></li>
+            <li><a href="#">Deslect All</a></li>
+        </ul>
+    </div>
+    -->
+
+    <div class="btn-group pull-right">
+
+        <button class="btn btn-default btn-sm search-toggle"><i class="icon riflescope"></i></button>
+
+
+    </div>
+
+    <div class="btn-group pull-right" style="margin-right: 10px;">
+
+        <button id="toolbar_btn_470" class="btn btn-default btn-sm"><i class="icon circle_plus"></i>&nbsp;New User
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="grid-search-wrapper" style="display: none;">
+
+    <form class="form-inline" role="form">
+        <div class="form-group">
+            <input class="form-control" style="margin-bottom: 0;" placeholder="search" id="search-query" type="text">
+        </div>
+        <div class="form-group">
+            <select id="search-param" class="form-control" style="margin-bottom: 0; margin-right: 5px;"
+                    placeholder="search criteria">
+
+
+                <option value="email" selected="selected">Email</option>
+
+
+            </select>
+        </div>
+        <button class="btn btn-warning btn-sm" id="clear-search"><i class="icon ban"></i></button>
+    </form>
+
+</div>
+
+
+<div style="max-height: 328px; height: 328px;" class="grid-table-wrapper">
+<div class="grid-main-wrapper">
+<table class="grid" width="100%">
+<thead>
+<tr>
+
+
+    <th>
+        <a class="sorter-column" data-sort-param="email" href="#" data-sort-direction="DESC">
+            Email
+
+            <i class="icon expand"></i>
+
+        </a>
+    </th>
+
+
+    <th>
+        <a class="sorter-column" data-sort-param="registered" href="#" data-sort-direction="NONE">
+            Registered Date
+
+            <i class="icon"></i>
+
+        </a>
+    </th>
+
+
+    <th>
+        <a class="sorter-column" data-sort-param="lastlogin" href="#" data-sort-direction="NONE">
+            Last Login
+
+            <i class="icon"></i>
+
+        </a>
+    </th>
+
+
+    <th>Actions</th>
+</tr>
+</thead>
+
+<tbody id="grid-body" style="min-height: 200px">
+
+<tr id="grid-row-471">
+
+
+    <td>
+
+        a5aruho@gmail.com
+
+    </td>
+
+
+    <td>
+
+        2012-06-12
+
+    </td>
+
+
+    <td>
+
+
+    </td>
+
+
+    <td width="30px">
+        <div class="btn-group" style="float: right;">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                <i class="icon cogwheel"></i>
+            </button>
+            <ul class="dropdown-menu" style="left: auto; right: 0;">
+
+                <li><a class="grid-action-467" data-row-id="grid-row-471" href="#">Edit Permissions</a></li>
+
+                <li><a class="grid-action-468" data-row-id="grid-row-471" href="#">Edit User</a></li>
+
+                <li><a class="grid-action-469" data-row-id="grid-row-471" href="#">Delete</a></li>
+
+            </ul>
+        </div>
+    </td>
+
+</tr>
+
+
+<tr id="grid-row-472">
+
+
+    <td>
+
+        aashoff@samaritan.org
+
+    </td>
+
+
+    <td>
+
+        2011-03-14
+
+    </td>
+
+
+    <td>
+
+        2011-03-14
+
+    </td>
+
+
+    <td width="30px">
+        <div class="btn-group" style="float: right;">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                <i class="icon cogwheel"></i>
+            </button>
+            <ul class="dropdown-menu" style="left: auto; right: 0;">
+
+                <li><a class="grid-action-467" data-row-id="grid-row-472" href="#">Edit Permissions</a></li>
+
+                <li><a class="grid-action-468" data-row-id="grid-row-472" href="#">Edit User</a></li>
+
+                <li><a class="grid-action-469" data-row-id="grid-row-472" href="#">Delete</a></li>
+
+            </ul>
+        </div>
+    </td>
+
+</tr>
+
+
+<tr id="grid-row-473">
+
+
+    <td>
+
+        aazman@jhsph.edu
+
+    </td>
+
+
+    <td>
+
+        2013-07-10
+
+    </td>
+
+
+    <td>
+
+        2013-07-10
+
+    </td>
+
+
+    <td width="30px">
+        <div class="btn-group" style="float: right;">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                <i class="icon cogwheel"></i>
+            </button>
+            <ul class="dropdown-menu" style="left: auto; right: 0;">
+
+                <li><a class="grid-action-467" data-row-id="grid-row-473" href="#">Edit Permissions</a></li>
+
+                <li><a class="grid-action-468" data-row-id="grid-row-473" href="#">Edit User</a></li>
+
+                <li><a class="grid-action-469" data-row-id="grid-row-473" href="#">Delete</a></li>
+
+            </ul>
+        </div>
+    </td>
+
+</tr>
+
+
+<tr id="grid-row-474">
+
+
+    <td>
+
+        ababylon@yahoo.com
+
+    </td>
+
+
+    <td>
+
+        2012-05-28
+
+    </td>
+
+
+    <td>
+
+
+    </td>
+
+
+    <td width="30px">
+        <div class="btn-group" style="float: right;">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                <i class="icon cogwheel"></i>
+            </button>
+            <ul class="dropdown-menu" style="left: auto; right: 0;">
+
+                <li><a class="grid-action-467" data-row-id="grid-row-474" href="#">Edit Permissions</a></li>
+
+                <li><a class="grid-action-468" data-row-id="grid-row-474" href="#">Edit User</a></li>
+
+                <li><a class="grid-action-469" data-row-id="grid-row-474" href="#">Delete</a></li>
+
+            </ul>
+        </div>
+    </td>
+
+</tr>
+
+
+<tr id="grid-row-475">
+
+
+    <td>
+
+        aba_crentsil@yahoo.com
+
+    </td>
+
+
+    <td>
+
+        2012-06-08
+
+    </td>
+
+
+    <td>
+
+
+    </td>
+
+
+    <td width="30px">
+        <div class="btn-group" style="float: right;">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                <i class="icon cogwheel"></i>
+            </button>
+            <ul class="dropdown-menu" style="left: auto; right: 0;">
+
+                <li><a class="grid-action-467" data-row-id="grid-row-475" href="#">Edit Permissions</a></li>
+
+                <li><a class="grid-action-468" data-row-id="grid-row-475" href="#">Edit User</a></li>
+
+                <li><a class="grid-action-469" data-row-id="grid-row-475" href="#">Delete</a></li>
+
+            </ul>
+        </div>
+    </td>
+
+</tr>
+
+
+<tr id="grid-row-476">
+
+
+    <td>
+
+        abbasay@unhcr.org
+
+    </td>
+
+
+    <td>
+
+        2010-11-30
+
+    </td>
+
+
+    <td>
+
+
+    </td>
+
+
+    <td width="30px">
+        <div class="btn-group" style="float: right;">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                <i class="icon cogwheel"></i>
+            </button>
+            <ul class="dropdown-menu" style="left: auto; right: 0;">
+
+                <li><a class="grid-action-467" data-row-id="grid-row-476" href="#">Edit Permissions</a></li>
+
+                <li><a class="grid-action-468" data-row-id="grid-row-476" href="#">Edit User</a></li>
+
+                <li><a class="grid-action-469" data-row-id="grid-row-476" href="#">Delete</a></li>
+
+            </ul>
+        </div>
+    </td>
+
+</tr>
+
+
+<tr id="grid-row-477">
+
+
+    <td>
+
+        abbasit@internationalmedicalcorps.org
+
+    </td>
+
+
+    <td>
+
+        2013-06-24
+
+    </td>
+
+
+    <td>
+
+        2013-06-24
+
+    </td>
+
+
+    <td width="30px">
+        <div class="btn-group" style="float: right;">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                <i class="icon cogwheel"></i>
+            </button>
+            <ul class="dropdown-menu" style="left: auto; right: 0;">
+
+                <li><a class="grid-action-467" data-row-id="grid-row-477" href="#">Edit Permissions</a></li>
+
+                <li><a class="grid-action-468" data-row-id="grid-row-477" href="#">Edit User</a></li>
+
+                <li><a class="grid-action-469" data-row-id="grid-row-477" href="#">Delete</a></li>
+
+            </ul>
+        </div>
+    </td>
+
+</tr>
+
+
+<tr id="grid-row-478">
+
+
+    <td>
+
+        abbasov@unhcr.org
+
+    </td>
+
+
+    <td>
+
+        2013-02-25
+
+    </td>
+
+
+    <td>
+
+        2014-02-14
+
+    </td>
+
+
+    <td width="30px">
+        <div class="btn-group" style="float: right;">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                <i class="icon cogwheel"></i>
+            </button>
+            <ul class="dropdown-menu" style="left: auto; right: 0;">
+
+                <li><a class="grid-action-467" data-row-id="grid-row-478" href="#">Edit Permissions</a></li>
+
+                <li><a class="grid-action-468" data-row-id="grid-row-478" href="#">Edit User</a></li>
+
+                <li><a class="grid-action-469" data-row-id="grid-row-478" href="#">Delete</a></li>
+
+            </ul>
+        </div>
+    </td>
+
+</tr>
+
+
+<tr id="grid-row-479">
+
+
+    <td>
+
+        abdelsal@unhcr.org
+
+    </td>
+
+
+    <td>
+
+        2013-02-25
+
+    </td>
+
+
+    <td>
+
+        2014-01-30
+
+    </td>
+
+
+    <td width="30px">
+        <div class="btn-group" style="float: right;">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                <i class="icon cogwheel"></i>
+            </button>
+            <ul class="dropdown-menu" style="left: auto; right: 0;">
+
+                <li><a class="grid-action-467" data-row-id="grid-row-479" href="#">Edit Permissions</a></li>
+
+                <li><a class="grid-action-468" data-row-id="grid-row-479" href="#">Edit User</a></li>
+
+                <li><a class="grid-action-469" data-row-id="grid-row-479" href="#">Delete</a></li>
+
+            </ul>
+        </div>
+    </td>
+
+</tr>
+
+
+<tr id="grid-row-480">
+
+
+    <td>
+
+        abderama@unhcr.org
+
+    </td>
+
+
+    <td>
+
+        2011-12-14
+
+    </td>
+
+
+    <td>
+
+        2012-05-23
+
+    </td>
+
+
+    <td width="30px">
+        <div class="btn-group" style="float: right;">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                <i class="icon cogwheel"></i>
+            </button>
+            <ul class="dropdown-menu" style="left: auto; right: 0;">
+
+                <li><a class="grid-action-467" data-row-id="grid-row-480" href="#">Edit Permissions</a></li>
+
+                <li><a class="grid-action-468" data-row-id="grid-row-480" href="#">Edit User</a></li>
+
+                <li><a class="grid-action-469" data-row-id="grid-row-480" href="#">Delete</a></li>
+
+            </ul>
+        </div>
+    </td>
+
+</tr>
+
+
+</tbody>
+
+</table>
+</div>
+<div class="grid-filters" style="display: none;">
+    <h4>Filters</h4>
+
+    <div id="filters">
+
+    </div>
+</div>
+
+</div>
+
+<div class="footbar">
+    <div style="margin-left: 5px" class="btn-group dropup pull-left">
+        <button class="btn btn-default btn-sm">Limit</button>
+        <button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a data-limit="10" class="limit-toggle" href="#">10</a></li>
+            <li><a data-limit="15" class="limit-toggle" href="#">15</a></li>
+            <li><a data-limit="30" class="limit-toggle" href="#">30</a></li>
+            <li><a data-limit="50" class="limit-toggle" href="#">50</a></li>
+        </ul>
+    </div>
+
+    <div class="btn-group pull-right" style="margin-right: 5px;">
+        <button disabled="disabled" class="btn btn-default btn-sm" id="grid-prev"><i class="icon circle_arrow_left"></i>
+            previous
+        </button>
+        <button class="btn btn-default btn-sm" id="grid-next">next&nbsp;<i
+                class="icon icon-right circle_arrow_right"></i></button>
+    </div>
+    <button class="btn btn-sm btn-default pull-right" id="grid-refresh" style="margin-right: 5px;"><i
+            class="icon restart"></i></button>
+</div>
+
+</div>
+</td>
+</tr>
+<tr>
+    <th>Main Tabs</th>
+    <td>
+        <div class="siv-tabs-menu" id="tabber-WebApp">
+            <ul class="siv-main-nav nav nav-tabs">
+                <li id="tab-list-item-0"><a class="siv-tab-menu list-item has-icon tools-area active"
+                                            id="tab-button-ToolArea" data-tab-icon="tools-area" href="#"
+                                            data-tab-index="0"><span class="siv-list-name">Tools</span> </a></li>
+                <li id="tab-list-item-1"><a class="siv-tab-menu list-item has-icon work-area" id="tab-button-WorkArea"
+                                            data-tab-icon="work-area" href="#" data-tab-index="1"><span
+                        class="siv-list-name">Work</span> </a></li>
+                <li id="tab-list-item-2"><a class="siv-tab-menu list-item has-icon explore-area"
+                                            id="tab-button-MainArea" data-tab-icon="explore-area" href="#"
+                                            data-tab-index="2"><span class="siv-list-name">Explore</span> </a></li>
+                <li id="tab-list-item-3"><a class="siv-tab-menu list-item" id="tab-button-Administrator"
+                                            data-tab-icon="" href="#" data-tab-index="3"><span class="siv-list-name">Admin</span>
+                </a></li>
+            </ul>
+        </div>
+    </td>
+</tr>
+
+<tr>
+<th>Notifications List</th>
+<td>
+<div style="height: 334px; max-height: 369px;" id="siv-notifications-wrap">
+<ul class="siv-notifications">
+
+<li id="noto-wrap-294148"
+    data-report-action="http://192.168.50.4/siv-v3/api/index.php/dataentry/38/25124c0f-9289-4ed9-9a49-0c7b26df28d1"
+    data-report-type="38" data-app-target="same" data-report-id="25124c0f-9289-4ed9-9a49-0c7b26df28d1">
+    <div class="siv-todo">
+        <div class="siv-todo-head">
+					<span>
+
+							<img src="assets/icons/flags/square/24/ET.png" class="siv-todo-flag">
+
+						Pagak reception site,
+
+						Ethiopia
+					</span>
+            <button data-noto-id="294148" class="btn btn-default btn-xs siv-pictos dismiss-noto pull-right">*</button>
+
+<span class="siv-permission-container">
+	<span class="hover-comment hover-no-style" rel="This report is available for you to view."
+          data-placement="bottom"><span class="siv-report-level"><i class="icon-lock"></i></span></span>
+		<span class="hover-comment hover-no-style" rel="The report is at this review level" data-placement="bottom">
+			<span class="siv-report-level siv-level-name">1</span>
+		</span>
+		<span class="hover-comment hover-no-style" rel="This is your review level" data-placement="bottom">
+			<span class="siv-report-level siv-stage-name">2</span>
+		</span>
+</span>
+        </div>
+        <div class="siv-todo-cont">
+            <p class="siv-todo-icon">
+
+            </p>
+
+            <p class="siv-todo-task">A new <strong>Basic Indicator Report (Week 17)</strong> was
+                <strong>created</strong> by <strong>MAINAA@unhcr.org </strong> 26 days ago.</p>
+        </div>
+        <div class="siv-todo-foot"><p>Added: 27/04/14 15:52 </p></div>
+    </div>
+</li>
+
+
+</ul>
+<button id="notos-load-more" class="btn btn-default btn-block">Load More</button>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+</div>
+
+
+<!--[if gte IE 9 ]>
+<script src="app/vendor/es5-shim.min.js"></script>
+<script src="app/vendor/es5-sham.min.js"></script>
+<![endif]-->
+
+<!--[if gte IE 9 ]>
+<script src="app/vendor/aight.min.js"></script>
+<script src="app/vendor/aight.d3.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+    less = {
+        env: "development" // or "production"
+    };
+</script>
+<!-- build:js build/main.js -->
+<!-- endbuild -->
+<script type="text/javascript" src="/siv-v3/app/vendor/raphael-min.js"></script>
+<script type="text/javascript" src="/siv-v3/app/vendor/less-1.5.0.min.js"></script>
+
+
+</body>
 </html>

@@ -34,22 +34,6 @@ var desired = {
   , name: "This is an example test"
 }
 
-b.init(desired, function() {
-  b.get("http://192.168.50.4/siv-v3/login.php", function() {
-    b.title(function(err, title) {
-      assert.ok(~title.indexOf('I am a page title - Sauce Labs'), 'Wrong title!');
-      b.elementById('submit', function(err, el) {
-        b.clickElement(el, function() {
-          b.eval("window.location.href", function(err, href) {
-            assert.ok(~href.indexOf('guinea'), 'Wrong URL!');
-            b.quit()
-          })
-        })
-      })
-    })
-  })
-})
-
 b.init(desired, function(){
 
     //this.timeout(60000);

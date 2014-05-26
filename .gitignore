@@ -5,7 +5,10 @@ client-side/node_modules
 client-side/build
 
 data-api/build
+data-api/.coverage
+data-api/output.xml
 
 php-api/build
+php-api/phpunit.xml
 
 .idea
