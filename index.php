@@ -104,7 +104,7 @@
                 <tr>
                     <td>Mocha (Unit Tests)</td>
                     <td>
-                        <a href="client-side/test.php" class="button small">Run/View</a>
+                        <a href="client-side/mocha.html" class="button small">Run/View</a>
                     </td>
                 </tr>
                 <tr>

@@ -1,5 +1,6 @@
 .DS_Store
 
+config.ini
 client-side/package.json
 client-side/node_modules
 client-side/nohup.*
