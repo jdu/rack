@@ -2,6 +2,7 @@
 
 client-side/package.json
 client-side/node_modules
+client-side/nohup.*
 client-side/build
 
 data-api/build
