@@ -11,6 +11,7 @@ data-api/.coverage
 data-api/output.xml
 
 php-api/build
+php-api/logs
 php-api/phpunit.xml
 
 .idea
