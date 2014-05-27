@@ -107,24 +107,20 @@
                 <tr>
                     <td>Mocha (Unit Tests)</td>
                     <td>
-                        <a href="client-side/mocha.html" class="button small">Run/View</a>
+                        <a href="client-side/views/mocha.html" class="button small">Run/View</a>
                     </td>
 
                 </tr>
                 <tr>
                     <td>Kitchen Sink (HTML/CSS)</td>
                     <td>
-                        <a href="client-side/sink.html" class="button small">View</a>
+                        <a href="client-side/views/sink.php" class="button small">View</a>
                     </td>
                 </tr>
                 <tr>
                     <td>Kitchen Sink (UI Components)</td>
                     <td>
-                        <a href="client-side/sink_components.html" class="button small">View</a>
-                    </td>
-
-                    <td>
-                        <a href="client-side/views/mocha.html" class="button small">Run/View</a>
+                        <a href="client-side/views/sink_components.html" class="button small">View</a>
                     </td>
                 </tr>
                 <tr>
@@ -143,6 +139,7 @@
                     <td>Forms</td>
                     <td><a href="client-side/views/forms.html" class="button small">View</a></td>
                 </tr>
+                <!--
                 <tr>
                     <td>Selenium (Functional/Automated User)</td>
                     <td>
@@ -150,6 +147,7 @@
                         <a href="client-side/build/selenium_results.html" class="button small">View</a>
                     </td>
                 </tr>
+                -->
                 </tbody>
             </table>
         </div>
