@@ -1,7 +1,7 @@
 <?php
 
-if(isset($_POST['action']) && !empty($_POST['action'])) {
-    $action = $_POST['action'];
+if(isset($_GET['action']) && !empty($_GET['action'])) {
+    $action = $_GET['action'];
     switch($action) {
         case 'test':
             spec_run();
@@ -12,9 +12,10 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
 }
 
 function spec_run(){
-    shell_exec("test.sh");
+    $result = shell_exec("./test.sh 2>&1; echo $?");
     echo json_encode(array(
-        "success" => true
+        "success" => true,
+        "data" => $result
     ), true);
 }
 

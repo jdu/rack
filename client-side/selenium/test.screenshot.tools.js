@@ -1,4 +1,3 @@
-
 /**
  * Take screenshots of major pages in the application
  * @param browser
@@ -9,6 +8,7 @@
 var fs = require("fs");
 var base = require("./base");
 var browser = base.browser;
+
 
 function run() {
 
@@ -45,22 +45,15 @@ function run() {
             return browser.elementById("loginBtn");
         })
         .then(function(el){
-            return browser.clickElement(el);
+            browser.clickElement(el);
         })
-        .waitForElementById("siv-head-wrap", 5000)
-        .then(function(){
-            return browser.elementById("twine-shortcuts");
-        })
-        .then(function(el){
-            return browser.clickElement(el);
-        })
-        .waitForElementById("ShortcutsWin", 5000)
+        .waitForElementById("toolselector", 5000)
         .takeScreenshot()
         .then(function (data) {
             screen_saver(data, "screen.tools.png");
         })
-        .quit(function () {
-            browser.quit();
+        .then(function(){
+            return browser.quit();
         })
         .done()
 }

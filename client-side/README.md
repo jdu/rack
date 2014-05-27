@@ -2,10 +2,10 @@
 
 ## Dependencies
 Mocha
-Mocha-Sauce
 Sauce Connect
-Jasmine
 Should.js
+Chai
+wd
 
 ## Setup
 Run ./setup.sh

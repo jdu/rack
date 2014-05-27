@@ -4,15 +4,16 @@
  */
 
 var glob = require("glob");
-var base = require("./base");
+var _ = require("underscore");
+
 
 var mocha = require("mocha");
 
 glob("test.*.js", null, function(err, files){
-    console.log(files);
-    for(var i = 0; i < files.length-1; i++){
-        require("./" + files[i]);
-    }
 
-    mocha.run();
+    _.each(files, function(filer){
+        var test_module = require("./" + filer);
+        test_module.run();
+    });
+
 })
