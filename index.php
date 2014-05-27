@@ -35,8 +35,9 @@
     <script type="text/javascript">
         $(document).ready(function(e){
             $("#btn-php-spec").on("click", function(){
-                $.get("php-api/SpecRunner.php?action=test", function(){
-                    console.log(arguments);
+                $.getJSON("php-api/SpecRunner.php?action=test", function(data){
+                    $('#test-result').text(data.data);
+                    $('#content-holder').foundation('reveal', 'open');
                 })
             })
         });
@@ -84,8 +85,10 @@
         <dd><a href="#php-rack">PHP</a></dd>
         <dd><a href="#php-api-rack">PHP API</a></dd>
         <dd><a href="#data-api-rack">Data API</a></dd>
+        <!--
         <dd><a href="#instances-rack">Instances</a></dd>
         <dd><a href="#resources">Resources</a></dd>
+        -->
     </dl>
 
     <div class="tabs-content vertical">
@@ -104,8 +107,9 @@
                 <tr>
                     <td>Mocha (Unit Tests)</td>
                     <td>
-                        <a href="client-side/test.php" class="button small">Run/View</a>
+                        <a href="client-side/mocha.html" class="button small">Run/View</a>
                     </td>
+
                 </tr>
                 <tr>
                     <td>Kitchen Sink (HTML/CSS)</td>
@@ -118,6 +122,26 @@
                     <td>
                         <a href="client-side/sink_components.html" class="button small">View</a>
                     </td>
+
+                    <td>
+                        <a href="client-side/views/mocha.html" class="button small">Run/View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kitchen Sink (HTML/CSS)</td>
+                    <td>
+                        <a href="client-side/views/sink.php" class="button small">View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kitchen Sink (UI Components)</td>
+                    <td>
+                        <a href="client-side/views/sink_components.html" class="button small">View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Forms</td>
+                    <td><a href="client-side/views/forms.html" class="button small">View</a></td>
                 </tr>
                 <tr>
                     <td>Selenium (Functional/Automated User)</td>
@@ -259,7 +283,7 @@
             </table>
         </div>
 
-        <!-- Instances Rack Tests -->
+        <!--
         <div class="content" id="instances-rack">
             <h3>Instance Testing</h3>
 
@@ -304,10 +328,10 @@
             </div>
         </div>
 
-        <!-- Instances Rack Tests -->
         <div class="content" id="resources-rack">
             <h3>Resources</h3>
         </div>
+        -->
     </div>
 
 
@@ -320,6 +344,12 @@
     <div class="small-12 columns">
         <p>All Content &copy; Copyright Jeff Uren 2014. All Rights Reserved.</p>
     </div>
+</div>
+
+
+<div id="content-holder" class="reveal-modal" data-reveal>
+    <pre id="test-result"></pre>
+  <a class="close-reveal-modal">&#215;</a>
 </div>
 
 <script src="assets/js/vendor/jquery.js"></script>
