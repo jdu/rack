@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/sh
 
 sudo rm -R ~/Projects/twine
 mkdir ~/Projects/twine
