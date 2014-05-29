@@ -118,7 +118,9 @@ require(['require', 'chai', 'chai-jquery', 'mocha', 'jquery'], function (require
         [
             'tests/test.Twine',
             "tests/test.Twine.Config",
-            'tests/test.IndicatorSelector'
+            'tests/test.IndicatorSelector',
+            "tests/test.plugin.SystemStatus",
+            "tests/test.plugin.Help"
         ], function (require) {
             if (window.mochaPhantomJS) {
                 mochaPhantomJS.run();

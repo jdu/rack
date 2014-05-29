@@ -1,27 +1,50 @@
 <html>
-  <head>
+<head>
     <meta charset="utf-8"/>
     <title>Twine Tests</title>
     <link rel="stylesheet" href="../node_modules/mocha/mocha.css"/>
-    <link rel="stylesheet" href="../../assets/css/foundation.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/siv-v3/assets/css/reset.css"/>
+    <link type="text/css" rel="stylesheet/less" href="/siv-v3/assets/css/less/bootstrap/bootstrap.less"/>
+    <link type="text/css" rel="stylesheet/less" href="/siv-v3/assets/css/less/twine.less"/>
+    <link type="text/css" rel="stylesheet" href="/siv-v3/assets/css/siv.jquery-ui.css"/>
+    <link type="text/css" rel="stylesheet" href="/siv-v3/assets/css/leaflet.css"/>
+    <link type="text/css" rel="stylesheet" href="/siv-v3/assets/css/leaflet.draw.css"/>
+    <link type="text/css" rel="stylesheet" href="/siv-v3/assets/css/MarkerCluster.css"/>
+    <link type="text/css" rel="stylesheet" href="/siv-v3/assets/css/MarkerCluster.Default.css"/>
 
-  </head>
-  <body>
+    <style>
+        body, html {
+            overflow: auto !important;
+        }
+    </style>
 
-    <div class="row">
-        <div class="small-12 columns">
-            <h1>Mocha Tests</h1>
-        </div>
-    </div>
+</head>
+<body>
 
-    <div class="row">
-        <div class="small-12 columns">
-            <div id="mocha"></div>
-        </div>
-    </div>
+<div id="mocha"></div>
 
 
-    <script data-main="../SpecRunner.js" src="../node_modules/requirejs/require.js"></script>
+<!--[if gte IE 9 ]>
+<script src="app/vendor/es5-shim.min.js"></script>
+<script src="app/vendor/es5-sham.min.js"></script>
+<![endif]-->
 
-  </body>
+<!--[if gte IE 9 ]>
+<script src="app/vendor/aight.min.js"></script>
+<script src="app/vendor/aight.d3.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+    less = {
+        env: "development" // or "production"
+    };
+</script>
+<!-- build:js build/main.js -->
+<!-- endbuild -->
+<script type="text/javascript" src="/siv-v3/app/vendor/raphael-min.js"></script>
+<script type="text/javascript" src="/siv-v3/app/vendor/less-1.5.0.min.js"></script>
+
+<script data-main="../SpecRunner.js" src="../node_modules/requirejs/require.js"></script>
+
+</body>
 </html>
